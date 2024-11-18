@@ -5,8 +5,10 @@
 // Remember to include a unit in the value—for example, pixels (10px). The key names of
 // the arrow keys are "ArrowUp" and "ArrowDown". Make sure the keys change only the
 // balloon, without scrolling the page.
-const balloon = document.querySelector('.balloon'); 
-let fontSize = 50;
+const balloon = document.querySelector('#balloon'); 
+let fontSize = 25;
+
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowUp') {
         fontSize *= 1.1; 
