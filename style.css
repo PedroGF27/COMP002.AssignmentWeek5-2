@@ -24,7 +24,13 @@ body {
 	margin: -.5em -.15em -.15em -.15em;
 }
 
-#tabbed-contents {
+.content-tab {
 	position: relative;
 	top: .5em;
+	display: none;
 }
+
+.content-tab.active {
+	display: block;
+}
+

@@ -39,19 +39,19 @@ document.addEventListener('keydown', (event) => {
 // Hint: display: none; hides an element, and display: block; will bring it
 
 document.addEventListener('DOMContentLoaded', () => {
-    const Links = document.querySelectorAll('#tabbed-layout');
-    const contents = document.querySelectorAll('#tabbed-contents');
+    const Links = document.querySelectorAll('.tabLink');
+    const contents = document.querySelectorAll('.content-tab');
 
     Links.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
 
             contents.forEach(content => {
-                content.classList.remove('on');
+                content.classList.remove('active');
             });
 
-            const theID = link.getAttribute('data');
-            document.getElementById(theID).classList.add('on');
+            const theID = link.getAttribute('data-tab');
+            document.getElementById(theID).classList.add('active');
         });
     });
 });
